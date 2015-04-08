@@ -58,13 +58,13 @@ package { 'nodemon':
 #  		}
 # }
 
-vcsrepo { "/home/testing":
+vcsrepo { "/opt/meanApps/startupOrDieWeb":
   ensure => present,
   provider => git,
-  source => 'https://github.com/joropeza/startupOrDieWeb.git',
-  user => 'joropeza'
+  source => 'git@github.com:joropeza/startupOrDieWeb.git',
+  user => 'joropeza',
   revision => 'master',
-  identity => '/home/vagrant/.ssh/id_rsa',
+  identity => '/home/vagrant/.ssh/authorized_keys',
 }
 
 
